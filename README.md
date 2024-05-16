@@ -1,14 +1,11 @@
-# Financial Modeling
-
-## Financial Modeling Repository
-* Welcome to the Financial Modeling Repository!
+# Welcome to the Financial Modeling Repository!
 
 - This repository contains a collection of financial modeling projects, designed to help users develop their skills in financial modeling and analysis. The projects are designed to be practical, easy to follow, and adaptable to real-world scenarios.
 
 - This project is intended to demonstrate best practices utilizing python, to create a mix of financial modeling tools. 
 
 
-### Projects
+## Projects
 1. Yahoo Finance Data Setup
 Files: 
 - YahooFinanceLibraryDataSetup.ipynb
