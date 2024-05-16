@@ -21,3 +21,7 @@ data.info()
 
 # show actions (dividends, splits)
 ticker.actions
+
+ticker.dividends
+
+ticker.splits
