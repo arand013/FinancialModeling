@@ -26,3 +26,17 @@ df.tail()
 df.shape
 
 df.describe()
+
+# Overview of closing price before calculating DMAs
+sns.set_style('darkgrid')
+plt.figure(figsize = (7,5), dpi = 100)
+plt.title('Closing Price')
+plt.plot(df['Close']) 
+
+# Calculate 50DMA
+df['fiftyDMA'] = df['Close'].rolling(50).mean()
+
+# Calculate 200DMA
+df['thDMA'] = df['Close'].rolling(200).mean()
+
+df.describe()
