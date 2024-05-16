@@ -40,3 +40,46 @@ df['fiftyDMA'] = df['Close'].rolling(50).mean()
 df['thDMA'] = df['Close'].rolling(200).mean()
 
 df.describe()
+
+# Plot Closing Price vs 50DMA vs 200DMA
+sns.set_style('darkgrid')
+plt.figure(figsize = (7,5), dpi = 100)
+plt.title('Closing Price vs 50DMA vs 200DMA')
+plt.plot(df['Close'], label = 'Close')
+plt.plot(df['fiftyDMA'], label = '50DMA')
+plt.plot(df['thDMA'], label = '200DMA')
+plt.legend()
+
+
+# Probabilistic Futurisitive Movement of the Stock 
+# Analyzing correlation between each variables
+plt.figure(figsize=(7,7), dpi=100)
+sns.heatmap(df.corr(), annot=True)
+
+
+# Plot Distplot of 50DMA
+sns.set_style('darkgrid')
+plt.figure(figsize = (7,5), dpi = 100)
+plt.title('Distplot of 50DMA')
+sns.distplot(df['fiftyDMA'])
+
+
+# Plot Distplot of the close price
+sns.set_style('darkgrid')
+plt.figure(figsize = (7,5), dpi = 100)
+plt.title('Distplot of the close price')
+sns.distplot(df['Close'])
+
+model = smf.ols(formula = 'Close~fiftyDMA', data = df)
+model = model.fit()
+
+model.summary()
+
+
+sns.set_style('darkgrid')
+plt.figure(figsize = (7,5), dpi = 100)
+plt.title('Closing Price vs 50DMA vs 200DMA')
+plt.plot(df['Close'], label = 'Close')
+plt.plot(df['fiftyDMA'], label = '50DMA')
+plt.plot(df['thDMA'], label = '200DMA')
+plt.legend()
