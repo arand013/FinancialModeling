@@ -8,6 +8,7 @@ import pandas as pd
 from pandas_datareader import data as pdr
 import yfinance as yf
 
+
 symbol = 'T'
 ticker = yf.Ticker(symbol)
 pd.Series(ticker.info).head(20)
