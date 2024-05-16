@@ -18,3 +18,6 @@ data = ticker.history(period='5d',
                       auto_adjust=True,
                       back_adjust=False)
 data.info()
+
+# show actions (dividends, splits)
+ticker.actions
