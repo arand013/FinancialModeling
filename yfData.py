@@ -5,6 +5,9 @@ import warnings
 warnings.filterwarnings('ignore')
 import pandas as pd
 import yfinance as yf
+from pandas_datareader import data as pdr
+
+import yfinance as yf
 
 symbol = 'T'
 ticker = yf.Ticker(symbol)
@@ -134,9 +137,6 @@ data = yf.download(
 
 data.info()
 
-from pandas_datareader import data as pdr
-
-import yfinance as yf
 yf.pdr_override()
 
 # download dataframe
