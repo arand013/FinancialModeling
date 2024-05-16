@@ -1,12 +1,11 @@
 # !pip install pandas
 # !pip install yfinance
+# !pip install pandas-datareader
 
 import warnings
 warnings.filterwarnings('ignore')
 import pandas as pd
-import yfinance as yf
 from pandas_datareader import data as pdr
-
 import yfinance as yf
 
 symbol = 'T'
